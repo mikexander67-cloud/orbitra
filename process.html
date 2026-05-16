@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works — Orbitra</title>
+<meta name="description" content="Walk through the 5-step audit-to-launch process so you know exactly what to expect.">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.process-hero { padding-top: clamp(3rem, 6vw, 6rem); }
+.process-hero h1 { max-width: 16ch; }
+.steps-wrap { position: relative; }
+.steps-wrap::before { content: ''; position: absolute; left: 1.25rem; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, var(--color-border-strong) 8%, var(--color-border-strong) 92%, transparent); }
+@media (min-width: 768px) { .steps-wrap::before { left: 1.5rem; } }
+.step-row { position: relative; padding: 1.5rem 0 1.5rem 4rem; }
+@media (min-width: 768px) { .step-row { padding-left: 5rem; padding-top: 2rem; padding-bottom: 2rem; } }
+.step-row .step-num { position: absolute; left: 0; top: 1.5rem; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--color-surface); border: 1px solid var(--color-border-strong); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500; color: var(--color-primary); z-index: 2; transition: all var(--duration-base) var(--ease-out-expo); }
+@media (min-width: 768px) { .step-row .step-num { width: 3rem; height: 3rem; top: 2rem; font-size: 0.95rem; } }
+.step-row.in-view .step-num { background: var(--color-primary); color: #fff; border-color: var(--color-primary); box-shadow: 0 0 0 6px rgba(91,141,239,0.12); }
+.step-meta { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+.step-row h3 { margin-bottom: 0.6rem; }
+.step-row p { max-width: 60ch; }
+.step-detail { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip { font-family: var(--font-mono); font-size: 0.75rem; padding: 0.35rem 0.7rem; border-radius: 999px; background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-secondary); }
+.prep-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--gradient-brand); display: flex; align-items: center; justify-content: center; color: #fff; margin-bottom: 1rem; }
+.timeline-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 768px) { .timeline-grid { grid-template-columns: repeat(3, 1fr); } }
+.timeline-card { padding: 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+.timeline-card .days { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 600; letter-spacing: -0.02em; }
+.timeline-card .days span { font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-muted); margin-left: 0.4rem; font-weight: 400; }
+.cta-section { position: relative; overflow: hidden; border-radius: var(--radius-xl); background: var(--color-primary); color: #fff; padding: clamp(2.5rem, 5vw, 4.5rem); }
+.cta-section h2, .cta-section p { color: #fff; }
+.cta-section p { color: rgba(255,255,255,0.75); max-width: 52ch; }
+.cta-section .mesh-bg { opacity: 0.5; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a href="/" class="nav-brand">Orbitra</a>
+      <div class="nav-links">
+        <a href="/home.html">Home</a>
+        <a href="/packages.html">Packages</a>
+        <a href="/process.html" aria-current="page">Process</a>
+        <a href="/about.html">About</a>
+        <a href="/faq.html">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer">Start Your Launch Audit</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero process-hero">
+    <div class="mesh-bg" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="reveal">
+        <span class="eyebrow">How it works</span>
+        <h1 style="margin-top:1rem;">From first call to <span class="gradient-text">launch day</span>, in five clear steps.</h1>
+        <p class="hero-lede">No surprises. No scope drift. You see the plan before you commit, and you know what happens at every milestone.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer">Start Your Launch Audit
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn-secondary btn-lg" href="/packages.html">See Packages</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">The five steps</span>
+        <h2>Structured delivery, milestone by milestone.</h2>
+        <p>Every Orbitra launch follows the same path. The package changes the scope — never the process.</p>
+      </div>
+
+      <div class="steps-wrap">
+
+        <article class="step-row reveal">
+          <div class="step-num">01</div>
+          <div class="step-meta">Free · 10 minutes</div>
+          <h3>Start Your Launch Audit</h3>
+          <p>You fill out a structured form covering your business, your goals, what you already have in place, and what you don't. Short, clear questions — no fluff. This becomes the foundation for everything that follows.</p>
+          <div class="step-detail">
+            <span class="chip">structured form</span>
+            <span class="chip">no calendar tag</span>
+            <span class="chip">no commitment</span>
+          </div>
+        </article>
+
+        <article class="step-row reveal">
+          <div class="step-num">02</div>
+          <div class="step-meta">Within 48 hours</div>
+          <h3>Recommendation + scope document</h3>
+          <p>We review your audit and send back a written recommendation: which package fits, why, and what's included. Everything is itemised. Prices are the published prices — what you see on the site is what you pay.</p>
+          <div class="step-detail">
+            <span class="chip">written scope</span>
+            <span class="chip">itemised deliverables</span>
+            <span class="chip">fixed price</span>
+          </div>
+        </article>
+
+        <article class="step-row reveal">
+          <div class="step-num">03</div>
+          <div class="step-meta">30-minute call</div>
+          <h3>Scope review</h3>
+          <p>We walk through the document together. You ask questions. We confirm the timeline, the payment schedule, and the exact deliverables. If anything needs adjusting, we adjust it now — before any work begins.</p>
+          <div class="step-detail">
+            <span class="chip">timeline confirmed</span>
+            <span class="chip">payments confirmed</span>
+            <span class="chip">deliverables confirmed</span>
+          </div>
+        </article>
+
+        <article class="step-row reveal">
+          <div class="step-num">04</div>
+          <div class="step-meta">Same week</div>
+          <h3>Signed scope + deposit</h3>
+          <p>You sign the scope document and pay the deposit. The deposit secures your start date and kicks off the build. The remaining balance follows the installment schedule for your package.</p>
+          <div class="step-detail">
+            <span class="chip">signed agreement</span>
+            <span class="chip">deposit paid</span>
+            <span class="chip">start date locked</span>
+          </div>
+        </article>
+
+        <article class="step-row reveal">
+          <div class="step-num">05</div>
+          <div class="step-meta">30 – 90 days</div>
+          <h3>Build &amp; launch</h3>
+          <p>Milestone-based delivery: branding, then website, then social setup, then training. You review at each milestone. We launch when everything is approved and ready — and your Care Plan picks up the day after.</p>
+          <div class="step-detail">
+            <span class="chip">milestone reviews</span>
+            <span class="chip">training included</span>
+            <span class="chip">care plan begins</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">What to prepare</span>
+        <h2>Bring these to the audit. We'll handle the rest.</h2>
+        <p>You don't need a brief, a brand, or a tech background. You need a clear picture of your business.</p>
+      </div>
+
+      <div class="grid grid-4 reveal-stagger">
+        <div class="card">
+          <div class="prep-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+          </div>
+          <h4>Your business</h4>
+          <p>What you sell, who you sell to, and where you're based. A short description is enough.</p>
+        </div>
+        <div class="card">
+          <div class="prep-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h4>Your timeline</h4>
+          <p>When you want to be live. We work backwards from a launch date that works for you.</p>
+        </div>
+        <div class="card">
+          <div class="prep-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h4>What you have</h4>
+          <p>Existing logo, photos, domain, social handles — share what exists. We work with what's there.</p>
+        </div>
+        <div class="card">
+          <div class="prep-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h4>Your priorities</h4>
+          <p>What matters most: bookings, sales, credibility, education. We tune the build around it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Timeline expectations</span>
+        <h2>How long it actually takes.</h2>
+        <p>From signed scope to launch day. Real working days, not optimistic estimates.</p>
+      </div>
+
+      <div class="timeline-grid reveal-stagger">
+        <div class="timeline-card">
+          <div class="price-tag">starter launch</div>
+          <div class="days" data-counter="30" data-suffix=" days">30 days</div>
+          <p style="margin-top:0.75rem;">Single-page site, basic branding, social starter kit. Fast and focused.</p>
+        </div>
+        <div class="timeline-card">
+          <div class="price-tag">full launch</div>
+          <div class="days" data-counter="60" data-suffix=" days">60 days</div>
+          <p style="margin-top:0.75rem;">4–6 page WordPress site, full branding, 1-month social, four training calls.</p>
+        </div>
+        <div class="timeline-card">
+          <div class="price-tag">premium launch</div>
+          <div class="days" data-counter="75" data-suffix=" days">75 days</div>
+          <p style="margin-top:0.75rem;">7–10 page WordPress site, expanded branding, five calls, post-launch check-in.</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top: 2.5rem; padding: 1.5rem; border: 1px dashed var(--color-border-strong); border-radius: var(--radius-lg); display: flex; gap: 1rem; align-items: flex-start;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B8DEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <div>
+          <h4 style="margin-bottom: 0.35rem;">Ecommerce timelines run longer.</h4>
+          <p>Shopify builds range from 45 to 90 days depending on product count and complexity. Full details are confirmed in your scope document.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-section reveal">
+        <div class="mesh-bg" aria-hidden="true"></div>
+        <div style="position: relative; z-index: 2;">
+          <span class="eyebrow" style="color: var(--gradient-end);">Next step</span>
+          <h2 style="margin-top: 1rem; max-width: 18ch;">Ready to see what your launch looks like?</h2>
+          <p style="margin-top: 1rem;">Start with the audit. You'll have a written scope and recommended package within 48 hours — no pressure to commit, no cost to find out.</p>
+          <div class="hero-ctas" style="margin-top: 2rem;">
+            <a class="btn btn-lg" style="background:#fff;color:var(--color-primary);" href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer">Start Your Launch Audit
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn-lg" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.25);" href="/faq.html">Read the FAQ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-brand" style="color:#fff;font-size:1.3rem;">Orbitra</div>
+        <p style="color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 38ch;">Launch packages for Mauritian businesses. Website, brand, and social — set up step by step.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+          <li><a href="/home.html">Home</a></li>
+          <li><a href="/packages.html">Packages</a></li>
+          <li><a href="/process.html">Process</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get started</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+          <li><a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer">Launch Audit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Orbitra. Built in Mauritius.</span>
+      <span>orbitra.mu</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+</body>
+</html>
