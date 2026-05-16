@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Orbitra — Start Your Launch Audit</title>
+<meta name="description" content="Provide the structured Launch Audit entry point and direct contact details.">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.contact-hero { padding-top: clamp(3rem, 6vw, 6rem); }
+.contact-hero h1 { max-width: 16ch; }
+.audit-card { display: grid; gap: 2rem; grid-template-columns: 1fr; padding: clamp(1.75rem, 3vw, 2.75rem); border-radius: var(--radius-xl); background: var(--color-surface); border: 1px solid var(--color-border); box-shadow: var(--shadow-md); position: relative; overflow: hidden; }
+@media (min-width: 900px) { .audit-card { grid-template-columns: 1.1fr 1fr; align-items: center; } }
+.audit-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(at 90% 10%, rgba(91,141,239,0.10), transparent 50%); pointer-events: none; }
+.audit-card > * { position: relative; z-index: 1; }
+.audit-steps { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.25rem; }
+.audit-steps li { display: flex; gap: 0.75rem; font-size: 0.95rem; color: var(--color-secondary); }
+.audit-steps .n { font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-accent); background: rgba(91,141,239,0.10); border-radius: 6px; padding: 0.15rem 0.5rem; height: fit-content; }
+.contact-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+@media (min-width: 768px) { .contact-grid { grid-template-columns: repeat(3, 1fr); } }
+.contact-card { display: flex; flex-direction: column; gap: 0.5rem; }
+.contact-card .icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(91,141,239,0.10); display: flex; align-items: center; justify-content: center; color: var(--color-accent); margin-bottom: 0.75rem; }
+.contact-card .label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-muted); }
+.contact-card .value { font-family: var(--font-heading); font-size: 1.15rem; color: var(--color-primary); font-weight: 500; }
+.contact-card .meta { font-size: 0.9rem; color: var(--color-secondary); }
+.expect-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); margin-top: 1.5rem; }
+@media (min-width: 768px) { .expect-grid { grid-template-columns: repeat(4, 1fr); } }
+.expect-item { padding: 1.25rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+.expect-item .t { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent); }
+.expect-item .h { font-family: var(--font-heading); font-weight: 600; margin-top: 0.35rem; color: var(--color-primary); }
+.expect-item .d { font-size: 0.88rem; color: var(--color-secondary); margin-top: 0.35rem; }
+.note-strip { display: flex; gap: 0.75rem; align-items: flex-start; padding: 1rem 1.25rem; background: rgba(91,141,239,0.06); border: 1px solid rgba(91,141,239,0.20); border-radius: var(--radius-md); margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-secondary); }
+.note-strip svg { flex-shrink: 0; color: var(--color-accent); margin-top: 2px; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a href="/" class="nav-brand">Orbitra</a>
+      <div class="nav-links">
+        <a href="/home.html">Home</a>
+        <a href="/packages.html">Packages</a>
+        <a href="/process.html">Process</a>
+        <a href="/about.html">About</a>
+        <a href="/faq.html">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Start Launch Audit</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero contact-hero">
+    <div class="mesh-bg"></div>
+    <div class="grid-overlay"></div>
+    <div class="container hero-inner">
+      <div class="reveal">
+        <span class="eyebrow">Contact</span>
+        <h1 style="margin-top: 1rem;">Let's see what your <span class="gradient-text">launch</span> needs.</h1>
+        <p class="hero-lede">Tell us where your business is today. We'll review your situation, recommend the right package, and send back a clear scope within 48 hours.</p>
+        <div class="hero-ctas">
+          <a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Start Your Launch Audit
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/packages.html" class="btn btn-secondary btn-lg">See Packages</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="audit-card reveal">
+        <div>
+          <span class="eyebrow">The Launch Audit</span>
+          <h2 style="margin-top: 1rem; font-size: clamp(1.75rem, 2.5vw + 1rem, 2.75rem);">A structured first step. Free.</h2>
+          <p style="margin-top: 1rem;">The Launch Audit is a short, guided intake. You answer a set of clear questions about your business, your stage, and what you need online. There's no calendar trap and no sales pressure.</p>
+          <ol class="audit-steps">
+            <li><span class="n">01</span><span>You fill out a structured form — about 10 minutes.</span></li>
+            <li><span class="n">02</span><span>We review and reply within 48 hours with a recommendation.</span></li>
+            <li><span class="n">03</span><span>You get a scope document: timeline, deliverables, and price.</span></li>
+            <li><span class="n">04</span><span>If it fits, we confirm. If not, you keep the recommendation.</span></li>
+          </ol>
+        </div>
+        <div>
+          <div class="card-glass" style="padding: 1.75rem; border-radius: var(--radius-lg);">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: #22C55E; box-shadow: 0 0 0 4px rgba(34,197,94,0.18);"></div>
+              <span class="price-tag">AUDIT_INTAKE / OPEN</span>
+            </div>
+            <h3 style="font-size: 1.4rem;">Ready when you are.</h3>
+            <p style="margin-top: 0.6rem; font-size: 0.95rem;">No deposit required to start the audit. We only charge once you accept a scope.</p>
+            <a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 1.25rem; width: 100%;">Begin the Audit
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <div class="note-strip">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              <span>The audit is a written intake — not a sales call. We reply by email with a scope document.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="expect-grid reveal-stagger" style="margin-top: 2.5rem;">
+        <div class="expect-item">
+          <div class="t">/ 01</div>
+          <div class="h">10 minutes</div>
+          <div class="d">To complete the audit form.</div>
+        </div>
+        <div class="expect-item">
+          <div class="t">/ 02</div>
+          <div class="h">48 hours</div>
+          <div class="d">For our written reply with a scope.</div>
+        </div>
+        <div class="expect-item">
+          <div class="t">/ 03</div>
+          <div class="h">No pressure</div>
+          <div class="d">You keep the recommendation either way.</div>
+        </div>
+        <div class="expect-item">
+          <div class="t">/ 04</div>
+          <div class="h">Clear price</div>
+          <div class="d">Package, timeline, and installments shown upfront.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Direct Contact</span>
+        <h2 style="margin-top: 1rem;">Prefer to reach out another way?</h2>
+        <p>If you already know which package you need or you have a quick question, these channels work too. The Launch Audit is still the fastest route to a scope.</p>
+      </div>
+
+      <div class="contact-grid reveal-stagger">
+        <div class="card contact-card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </div>
+          <span class="label">Email</span>
+          <a href="mailto:hello@orbitra.mu" class="value">hello@orbitra.mu</a>
+          <span class="meta">Replies within one working day.</span>
+        </div>
+        <div class="card contact-card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <span class="label">WhatsApp</span>
+          <a href="https://wa.me/23000000000" target="_blank" rel="noopener noreferrer" class="value">+230 0000 0000</a>
+          <span class="meta">For quick questions, Mon–Fri.</span>
+        </div>
+        <div class="card contact-card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <span class="label">Based In</span>
+          <span class="value">Mauritius</span>
+          <span class="meta">Working with clients across the island.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="card reveal" style="text-align: center; padding: clamp(2.5rem, 5vw, 4.5rem) 1.5rem; background: var(--color-primary); border: 0; color: #fff; position: relative; overflow: hidden;">
+        <div class="mesh-bg" style="opacity: 0.4;"></div>
+        <div style="position: relative; z-index: 1; max-width: 640px; margin: 0 auto;">
+          <span class="eyebrow" style="color: var(--gradient-end);">One Clear Step</span>
+          <h2 style="color: #fff; margin-top: 1rem;">Start the Launch Audit.</h2>
+          <p style="color: rgba(255,255,255,0.75); margin-top: 0.85rem;">Tell us about your business. We'll send back a structured scope within 48 hours.</p>
+          <a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="margin-top: 1.75rem; background: #fff; color: var(--color-primary);">Begin the Audit
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-brand" style="color: #fff; margin-bottom: 0.75rem;">Orbitra</div>
+        <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; max-width: 36ch;">Launch packages for Mauritian businesses. Website, brand, and social — set up step by step.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="/home.html">Home</a>
+          <a href="/packages.html">Packages</a>
+          <a href="/process.html">Process</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="/about.html">About</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Start</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer">Launch Audit</a>
+          <a href="mailto:hello@orbitra.mu">hello@orbitra.mu</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Orbitra. Based in Mauritius.</span>
+      <span>Pricing published, not negotiated.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+</body>
+</html>
