@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orbitra — Launch Packages for Mauritian Businesses</title>
+<meta name="description" content="Orbitra builds the digital foundations small businesses need to launch. Defined packages, transparent pricing, step-by-step delivery in Mauritius.">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.hero-grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
+@media(min-width:1024px){.hero-grid{grid-template-columns:1.3fr 1fr;gap:4rem}}
+.hero-visual{position:relative;aspect-ratio:1/1;max-width:480px;margin-left:auto;width:100%}
+.orbit-ring{position:absolute;inset:0;border:1px dashed rgba(91,141,239,0.35);border-radius:50%;animation:spin 40s linear infinite}
+.orbit-ring:nth-child(2){inset:14%;animation-duration:28s;animation-direction:reverse;border-color:rgba(11,18,32,0.12)}
+.orbit-ring:nth-child(3){inset:30%;animation-duration:20s;border-color:rgba(91,141,239,0.5)}
+.orbit-dot{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--gradient-brand);box-shadow:0 0 0 6px rgba(91,141,239,0.12)}
+.orbit-dot.d1{top:-7px;left:50%;transform:translateX(-50%)}
+.orbit-dot.d2{top:14%;right:0;width:10px;height:10px}
+.orbit-dot.d3{bottom:30%;left:0;width:8px;height:8px;background:var(--color-primary);box-shadow:0 0 0 5px rgba(11,18,32,0.06)}
+.orbit-core{position:absolute;inset:38%;border-radius:50%;background:var(--color-surface);border:1px solid var(--color-border);box-shadow:var(--shadow-lg);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:.7rem;color:var(--color-muted);letter-spacing:.1em}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pkg-grid{display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media(min-width:768px){.pkg-grid{grid-template-columns:repeat(3,1fr)}}
+.pkg-card{display:flex;flex-direction:column;height:100%}
+.pkg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--color-border)}
+.card-featured .pkg-head{border-bottom-color:rgba(255,255,255,0.15)}
+.pkg-badge{font-family:var(--font-mono);font-size:.7rem;padding:.3rem .55rem;border-radius:999px;background:var(--gradient-brand);color:#fff;letter-spacing:.08em;text-transform:uppercase}
+.pkg-foot{margin-top:auto;padding-top:1.5rem}
+.care-grid{display:grid;gap:2rem;grid-template-columns:1fr;align-items:center}
+@media(min-width:900px){.care-grid{grid-template-columns:1.1fr 1fr}}
+.care-list{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.25rem;margin-top:1.5rem}
+.care-list span{display:flex;align-items:center;gap:.5rem;font-size:.92rem;color:var(--color-secondary)}
+.care-list svg{flex-shrink:0;color:var(--color-accent)}
+.process-list{display:grid;gap:1.5rem;position:relative}
+.process-list::before{content:'';position:absolute;left:1.25rem;top:2.5rem;bottom:2.5rem;width:1px;background:linear-gradient(to bottom,var(--color-border-strong),transparent)}
+.cta-final{background:var(--color-primary);color:#fff;border-radius:var(--radius-xl);padding:clamp(2.5rem,5vw,4.5rem);position:relative;overflow:hidden}
+.cta-final h2,.cta-final p{color:#fff}
+.cta-final p{color:rgba(255,255,255,0.7);max-width:52ch}
+.cta-mesh{position:absolute;inset:0;background:radial-gradient(at 80% 20%,rgba(91,141,239,0.4) 0,transparent 50%),radial-gradient(at 20% 90%,rgba(138,180,248,0.25) 0,transparent 55%);opacity:.8}
+.cta-final>*{position:relative;z-index:1}
+.stats-row{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--color-border)}
+@media(min-width:768px){.stats-row{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="nav-brand">Orbitra<span style="color:var(--color-accent)">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/packages.html">Packages</a>
+      <a href="/process.html">Process</a>
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Start Your Launch Audit</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="mesh-bg"></div>
+    <div class="grid-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Launch packages · Mauritius</span>
+          <h1 style="margin-top:1.25rem">The structured way to <span class="gradient-text">launch online</span>.</h1>
+          <p class="hero-lede">Orbitra builds the digital foundations small businesses need to launch — website, branding, and social presence. Defined packages, clear pricing, step by step.</p>
+          <div class="hero-ctas">
+            <a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Start Your Launch Audit
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#packages" class="btn btn-secondary btn-lg">See Packages</a>
+          </div>
+          <div class="stats-row reveal-stagger">
+            <div class="stat"><span class="stat-number" data-counter="30" data-suffix="d">0</span><span class="stat-label">Starter delivery</span></div>
+            <div class="stat"><span class="stat-number" data-counter="6" data-prefix="" data-suffix="">0</span><span class="stat-label">Defined packages</span></div>
+            <div class="stat"><span class="stat-number" data-counter="3" data-suffix="x">0</span><span class="stat-label">Payment installments</span></div>
+            <div class="stat"><span class="stat-number" data-counter="100" data-suffix="%">0</span><span class="stat-label">Published pricing</span></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="orbit-ring"></div>
+          <div class="orbit-ring"></div>
+          <div class="orbit-ring"></div>
+          <div class="orbit-dot d1"></div>
+          <div class="orbit-dot d2"></div>
+          <div class="orbit-dot d3"></div>
+          <div class="orbit-core">ORBITRA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="what">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">What Orbitra does</span>
+        <h2 style="margin-top:1rem">Three foundations. One launch.</h2>
+        <p>Every package is built around the same idea: get a small business ready online with a working website, a clear brand, and a social presence that's already in motion.</p>
+      </div>
+      <div class="grid grid-3 reveal-stagger">
+        <article class="card">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5B8DEF" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 20h8"/></svg>
+          <h3 style="margin-top:1.25rem">Website</h3>
+          <p style="margin-top:.6rem">A real site that loads fast, reads clearly, and tells customers what you do — built on platforms you can keep using long term.</p>
+        </article>
+        <article class="card">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5B8DEF" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+          <h3 style="margin-top:1.25rem">Branding</h3>
+          <p style="margin-top:.6rem">Logo, colours, typography, and a short brand manual so your business looks consistent on every channel.</p>
+        </article>
+        <article class="card">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5B8DEF" stroke-width="1.8"><path d="M4 4h16v12H7l-3 4z"/><path d="M8 9h8M8 12h5"/></svg>
+          <h3 style="margin-top:1.25rem">Social</h3>
+          <p style="margin-top:.6rem">A first month of social content set up and posted, so the day you launch isn't the day you have to figure it out alone.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" style="background:linear-gradient(180deg,transparent,rgba(91,141,239,0.04))">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Service business packages</span>
+        <h2 style="margin-top:1rem">Pick the level that fits where you are.</h2>
+        <p>Each package is fixed in scope and price. Pay a deposit to start, the rest in clear installments.</p>
+      </div>
+      <div class="pkg-grid reveal-stagger">
+        <article class="card pkg-card">
+          <div class="pkg-head">
+            <div>
+              <span class="price-tag">// 01</span>
+              <h3 style="margin-top:.5rem">Starter Launch</h3>
+            </div>
+            <span class="pkg-badge">30 days</span>
+          </div>
+          <div class="price-amount">Rs 25,000</div>
+          <div class="price-meta">Rs 10,000 deposit + Rs 15,000 at handover</div>
+          <ul class="feature-list">
+            <li>Single-page website on Vercel</li>
+            <li>Basic branding kit</li>
+            <li>Social starter kit</li>
+            <li>Education on managing your setup</li>
+          </ul>
+          <div class="pkg-foot"><a href="/packages.html" class="btn btn-secondary" style="width:100%">View details</a></div>
+        </article>
+
+        <article class="card card-featured pkg-card">
+          <div class="pkg-head">
+            <div>
+              <span class="price-tag" style="color:rgba(255,255,255,0.6)">// 02</span>
+              <h3 style="margin-top:.5rem">Full Launch</h3>
+            </div>
+            <span class="pkg-badge">Most chosen</span>
+          </div>
+          <div class="price-amount" style="color:#fff">Rs 65,000</div>
+          <div class="price-meta" style="color:rgba(255,255,255,0.6)">Rs 26,000 deposit + 2 × Rs 19,500</div>
+          <ul class="feature-list">
+            <li>4–6 page WordPress website</li>
+            <li>Full branding system</li>
+            <li>1-month social setup</li>
+            <li>4 training calls + business manual</li>
+            <li>60-day WhatsApp support</li>
+          </ul>
+          <div class="pkg-foot"><a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer" class="btn" style="width:100%;background:#fff;color:var(--color-primary)">Start Your Launch Audit</a></div>
+        </article>
+
+        <article class="card pkg-card">
+          <div class="pkg-head">
+            <div>
+              <span class="price-tag">// 03</span>
+              <h3 style="margin-top:.5rem">Premium Launch</h3>
+            </div>
+            <span class="pkg-badge">75 days</span>
+          </div>
+          <div class="price-amount">Rs 95,000</div>
+          <div class="price-meta">Rs 38,000 deposit + 2 × Rs 28,500</div>
+          <ul class="feature-list">
+            <li>7–10 page WordPress website</li>
+            <li>Expanded branding system</li>
+            <li>1-month social setup</li>
+            <li>5 calls + custom video walkthrough</li>
+            <li>30-day check-in + 90-day support</li>
+          </ul>
+          <div class="pkg-foot"><a href="/packages.html" class="btn btn-secondary" style="width:100%">View details</a></div>
+        </article>
+      </div>
+
+      <div class="section-header reveal" style="margin-top:5rem">
+        <span class="eyebrow">Ecommerce packages</span>
+        <h2 style="margin-top:1rem">Selling products? Start on Shopify.</h2>
+        <p>For product businesses, everything is structured around your catalogue size. 40% deposit, balance in two installments.</p>
+      </div>
+      <div class="pkg-grid reveal-stagger">
+        <article class="card pkg-card">
+          <div class="pkg-head">
+            <div><span class="price-tag">// SHOP·01</span><h3 style="margin-top:.5rem">Ecommerce Starter</h3></div>
+            <span class="pkg-badge">45 days</span>
+          </div>
+          <div class="price-amount">Rs 75,000</div>
+          <div class="price-meta">Up to 25 products · Shopify</div>
+          <ul class="feature-list">
+            <li>Store setup and theme configuration</li>
+            <li>Product upload and structure</li>
+            <li>Payments and shipping configured</li>
+            <li>Launch-ready handover</li>
+          </ul>
+          <div class="pkg-foot"><a href="/packages.html" class="btn btn-secondary" style="width:100%">View details</a></div>
+        </article>
+        <article class="card pkg-card">
+          <div class="pkg-head">
+            <div><span class="price-tag">// SHOP·02</span><h3 style="margin-top:.5rem">Ecommerce Full</h3></div>
+            <span class="pkg-badge">60 days</span>
+          </div>
+          <div class="price-amount">Rs 110,000</div>
+          <div class="price-meta">26–100 products · Shopify</div>
+          <ul class="feature-list">
+            <li>Expanded store and category structure</li>
+            <li>Bulk product import support</li>
+            <li>Collections, filters, and search</li>
+            <li>Training on managing the store</li>
+          </ul>
+          <div class="pkg-foot"><a href="/packages.html" class="btn btn-secondary" style="width:100%">View details</a></div>
+        </article>
+        <article class="card pkg-card">
+          <div class="pkg-head">
+            <div><span class="price-tag">// SHOP·03</span><h3 style="margin-top:.5rem">Ecommerce Premium</h3></div>
+            <span class="pkg-badge">90 days</span>
+          </div>
+          <div class="price-amount">Rs 165,000</div>
+          <div class="price-meta">100+ products or complex variants</div>
+          <ul class="feature-list">
+            <li>Large catalogue handling</li>
+            <li>Variant and inventory logic</li>
+            <li>Custom collection structure</li>
+            <li>Extended training and handover</li>
+          </ul>
+          <div class="pkg-foot"><a href="/packages.html" class="btn btn-secondary" style="width:100%">View details</a></div>
+        </article>
+      </div>
+      <p class="reveal" style="margin-top:2rem;font-size:.92rem;color:var(--color-muted)">Add-ons available: photography, description writing, extra products, and advanced features. All quoted upfront.</p>
+    </div>
+  </section>
+
+  <section id="care">
+    <div class="container">
+      <div class="care-grid">
+        <div class="reveal">
+          <span class="eyebrow">Care Plan</span>
+          <h2 style="margin-top:1rem">Your site needs <em style="font-style:italic;color:var(--color-accent)">someone</em> to look after it.</h2>
+          <p style="margin-top:1rem">The Care Plan is included with every launch and continues at <strong style="color:var(--color-primary);font-family:var(--font-mono)">Rs 3,500/month</strong>. It's not optional — it's how your website stays online, secure, and yours.</p>
+          <div class="care-list">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Hosting</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Domain renewal</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Email setup</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Daily backups</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Security patches</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Uptime monitoring</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Minor updates</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Direct support line</span>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="card" style="background:var(--color-primary);color:#fff;border-color:var(--color-primary)">
+            <span class="price-tag" style="color:rgba(255,255,255,0.6)">// ongoing</span>
+            <h3 style="margin-top:.75rem;color:#fff">Continue growing</h3>
+            <p style="color:rgba(255,255,255,0.7);margin-top:.75rem">Once your launch is complete, you can add:</p>
+            <ul class="feature-list">
+              <li>Ads Management — Light, Standard, or Active</li>
+              <li>Social Continuation — extend the first-month setup</li>
+              <li>Site refresh after 12 months</li>
+              <li>Booking system or ecommerce module add-on</li>
+            </ul>
+            <a href="/packages.html" class="btn" style="margin-top:1.5rem;width:100%;background:#fff;color:var(--color-primary)">See all options</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" style="background:var(--color-surface);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">How it works</span>
+        <h2 style="margin-top:1rem">Five steps. No surprises.</h2>
+        <p>Every project follows the same path so you always know what's next.</p>
+      </div>
+      <div class="process-list reveal-stagger">
+        <div class="process-step"><div class="step-num">01</div><h4>Start Your Launch Audit</h4><p style="margin-top:.4rem">A free, structured form that tells us where you are and what you need.</p></div>
+        <div class="process-step"><div class="step-num">02</div><h4>Recommendation + scope</h4><p style="margin-top:.4rem">Within 48 hours, you receive a clear scope document with the right package, timeline, and price.</p></div>
+        <div class="process-step"><div class="step-num">03</div><h4>Scope review</h4><p style="margin-top:.4rem">We walk through the scope together and confirm deliverables, dates, and payment terms.</p></div>
+        <div class="process-step"><div class="step-num">04</div><h4>Signed scope + deposit</h4><p style="margin-top:.4rem">Once both are in, your project goes on the build schedule.</p></div>
+        <div class="process-step"><div class="step-num">05</div><h4>Build &amp; launch</h4><p style="margin-top:.4rem">Milestone-based delivery — you see progress, give feedback, and approve each stage until handover.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="container">
+      <div class="cta-final reveal">
+        <div class="cta-mesh"></div>
+        <span class="eyebrow" style="color:var(--gradient-end)">Ready when you are</span>
+        <h2 style="margin-top:1rem;max-width:18ch">Start with the audit. We'll take it from there.</h2>
+        <p style="margin-top:1rem">Tell us about your business in a short structured form. You'll get a clear recommendation, a fixed price, and a timeline within 48 hours — no pressure, no guesswork.</p>
+        <div class="hero-ctas" style="margin-top:2rem">
+          <a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer" class="btn btn-lg" style="background:#fff;color:var(--color-primary)">Start Your Launch Audit
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="/faq.html" class="btn btn-lg btn-ghost" style="color:#fff;border:1px solid rgba(255,255,255,0.25)">Read the FAQ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-brand" style="color:#fff;font-size:1.3rem">Orbitra<span style="color:var(--color-accent)">.</span></div>
+        <p style="color:rgba(255,255,255,0.6);margin-top:1rem;max-width:34ch;font-size:.95rem">Website, brand, and social — set up as structured packages for small businesses in Mauritius.</p>
+      </div>
+      <div>
+        <h4>Packages</h4>
+        <div style="display:flex;flex-direction:column;gap:.5rem">
+          <a href="/packages.html">Service packages</a>
+          <a href="/packages.html">Ecommerce</a>
+          <a href="/packages.html">Care Plan</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <div style="display:flex;flex-direction:column;gap:.5rem">
+          <a href="/about.html">About</a>
+          <a href="/process.html">Process</a>
+          <a href="/faq.html">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <h4>Start</h4>
+        <div style="display:flex;flex-direction:column;gap:.5rem">
+          <a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer">Launch Audit</a>
+          <a href="mailto:hello@orbitra.mu">hello@orbitra.mu</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Orbitra · Mauritius</span>
+      <span>orbitra.mu</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+</body>
+</html>
