@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Orbitra</title>
+<meta name="description" content="Answer the most common questions about pricing, payment, scope, timelines, and Care Plan.">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.faq-hero { padding: var(--space-16) 0 var(--space-8); position: relative; overflow: hidden; }
+.faq-hero-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-6); align-items: end; }
+@media (min-width: 1024px) { .faq-hero-grid { grid-template-columns: 1.5fr 1fr; gap: var(--space-8); } }
+.faq-hero h1 .accent { color: var(--color-primary); font-style: italic; }
+.faq-toc { display: flex; flex-wrap: wrap; gap: 0; border: var(--hairline) solid var(--color-border); }
+.faq-toc a { flex: 1 1 200px; padding: var(--space-3) var(--space-4); border-right: var(--hairline) solid var(--color-border); border-bottom: var(--hairline) solid var(--color-border); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-text); display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); transition: background var(--duration-base) var(--ease-out-quart), color var(--duration-base) var(--ease-out-quart); }
+.faq-toc a:hover { background: var(--color-heading); color: var(--color-bg); }
+.faq-toc a:hover .toc-num { color: var(--color-bg); }
+.faq-toc a .toc-num { color: var(--color-primary); transition: color var(--duration-base); }
+.accordion { border-top: var(--hairline) solid var(--color-border); }
+.accordion-item { border-bottom: var(--hairline) solid var(--color-border); }
+.accordion-trigger { width: 100%; background: transparent; border: none; cursor: pointer; padding: var(--space-4) 0; display: grid; grid-template-columns: 60px 1fr 32px; gap: var(--space-3); align-items: start; text-align: left; font-family: inherit; color: var(--color-heading); transition: opacity var(--duration-base); }
+.accordion-trigger:hover { opacity: 0.7; }
+.accordion-num { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.2em; color: var(--color-primary); padding-top: 0.4rem; }
+.accordion-q { font-family: var(--font-display); font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.35; color: var(--color-heading); font-weight: 400; }
+.accordion-icon { width: 24px; height: 24px; position: relative; margin-top: 0.5rem; justify-self: end; }
+.accordion-icon::before, .accordion-icon::after { content: ''; position: absolute; background: var(--color-heading); transition: transform var(--duration-base) var(--ease-out-quart); }
+.accordion-icon::before { top: 50%; left: 0; right: 0; height: 1px; }
+.accordion-icon::after { left: 50%; top: 0; bottom: 0; width: 1px; }
+.accordion-item.open .accordion-icon::after { transform: scaleY(0); }
+.accordion-panel { max-height: 0; overflow: hidden; transition: max-height var(--duration-slow) var(--ease-out-quart); }
+.accordion-panel-inner { padding: 0 0 var(--space-4) 0; display: grid; grid-template-columns: 60px 1fr 32px; gap: var(--space-3); }
+.accordion-panel-inner > div:nth-child(2) { color: var(--color-text); font-size: 1rem; line-height: 1.7; }
+.accordion-panel-inner p + p { margin-top: 0.85rem; }
+.accordion-panel-inner ul { list-style: none; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.accordion-panel-inner ul li { padding-left: 1.25rem; position: relative; }
+.accordion-panel-inner ul li::before { content: ''; position: absolute; left: 0; top: 0.7rem; width: 8px; height: 1px; background: var(--color-border-strong); }
+.cta-final { padding: var(--space-16) 0; position: relative; overflow: hidden; }
+.cta-card { border: var(--hairline) solid var(--color-border); padding: var(--space-8) var(--space-6); display: grid; grid-template-columns: 1fr; gap: var(--space-4); align-items: center; background: var(--color-bg); position: relative; }
+@media (min-width: 900px) { .cta-card { grid-template-columns: 1.4fr 1fr; padding: var(--space-12) var(--space-8); } }
+.cta-card h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); }
+.cta-card .accent { color: var(--color-primary); font-style: italic; }
+.still-asking { display: grid; grid-template-columns: 1fr; gap: 0; border: var(--hairline) solid var(--color-border); }
+@media (min-width: 800px) { .still-asking { grid-template-columns: repeat(3, 1fr); } }
+.still-asking-item { padding: var(--space-4); border-bottom: var(--hairline) solid var(--color-border); }
+.still-asking-item:last-child { border-bottom: none; }
+@media (min-width: 800px) { .still-asking-item { border-bottom: none; border-right: var(--hairline) solid var(--color-border); } .still-asking-item:last-child { border-right: none; } }
+.still-asking-item .label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-2); }
+.still-asking-item h4 { color: var(--color-heading); margin-bottom: 0.5rem; }
+.still-asking-item p { font-size: 0.95rem; color: var(--color-muted); }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Orbitra</a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/packages.html">Packages</a></li>
+          <li><a href="/process.html">Process</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer">Launch Audit</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/packages.html">Packages</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer">Start Your Launch Audit</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="faq-hero blueprint-bg">
+    <div class="container">
+      <div class="faq-hero-grid">
+        <div class="reveal">
+          <span class="eyebrow hairline-draw">Section 05 — Frequently Asked</span>
+          <h1 style="margin-top: var(--space-3);">Questions, answered <span class="accent">plainly</span>.</h1>
+          <p style="margin-top: var(--space-3); max-width: 560px; color: var(--color-muted); font-size: 1.1rem;">Pricing, payment, scope, timelines, and the Care Plan — explained the same way we explain them on a call. No jargon, no fine print.</p>
+        </div>
+        <div class="reveal">
+          <dl class="hero-meta">
+            <div><dt>Updated</dt><dd>This quarter</dd></div>
+            <div style="margin-top: var(--space-2);"><dt>Topics covered</dt><dd>Three sections, twelve questions</dd></div>
+            <div style="margin-top: var(--space-2);"><dt>Still unsure</dt><dd>Start a free Launch Audit</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="faq-toc reveal" style="margin-top: var(--space-8);">
+        <a href="#pricing"><span><span class="toc-num">01 / </span>Pricing &amp; Payment</span><span>↓</span></a>
+        <a href="#scope"><span><span class="toc-num">02 / </span>Scope &amp; Timelines</span><span>↓</span></a>
+        <a href="#care"><span><span class="toc-num">03 / </span>Care Plan &amp; Support</span><span>↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <span class="eyebrow hairline-draw">01 / Pricing &amp; Payment</span>
+        </div>
+        <div>
+          <h2>How pricing works, and how you pay.</h2>
+          <p style="margin-top: var(--space-2); color: var(--color-muted); max-width: 580px;">Every package has a fixed price and a clear payment schedule. No hidden fees, no surprise invoices at handover.</p>
+        </div>
+      </div>
+
+      <div class="accordion reveal">
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.01</span><span class="accordion-q">Are your prices fixed, or do you quote per project?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>Fixed. Every Orbitra package has a published price on the Packages page. What you see is what you pay.</p><p>If your needs fall outside a package, we&rsquo;ll recommend the closest fit plus any add-ons. The total is confirmed in your scope document before you commit.</p></div><span></span></div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.02</span><span class="accordion-q">What&rsquo;s the deposit, and when are the rest due?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>Deposits start the work. Balances are tied to delivery milestones, not arbitrary dates.</p><ul><li>Starter Launch — 40% deposit, 60% at handover</li><li>Full &amp; Premium Launch — 40% deposit, then two equal installments</li><li>Ecommerce packages — 40% deposit, balance over two installments</li></ul><p>Installments are scheduled in your signed scope document so you always know what&rsquo;s next.</p></div><span></span></div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.03</span><span class="accordion-q">Do you accept bank transfer? Card? Cash?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>Local bank transfer in MUR is preferred. We&rsquo;ll send a proper invoice for each installment with our account details.</p><p>Cash and other arrangements can be discussed during the scope review if needed.</p></div><span></span></div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.04</span><span class="accordion-q">Is the price negotiable?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>No. Packages are priced so we can deliver the full scope without cutting corners. Holding prices steady is how we keep them fair for everyone.</p><p>If a package feels out of reach, the Starter Launch is built for early-stage businesses on a tight budget.</p></div><span></span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="scope">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <span class="eyebrow hairline-draw">02 / Scope &amp; Timelines</span>
+        </div>
+        <div>
+          <h2>What&rsquo;s in, what&rsquo;s out, and how long it takes.</h2>
+          <p style="margin-top: var(--space-2); color: var(--color-muted); max-width: 580px;">Every deliverable is listed in your scope document. Timelines assume you supply content and feedback on time.</p>
+        </div>
+      </div>
+
+      <div class="accordion reveal">
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.05</span><span class="accordion-q">How long does a launch take?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><ul><li>Starter Launch — 30 days</li><li>Full Launch — 60 days</li><li>Premium Launch — 75 days</li><li>Ecommerce Starter — 45 days &middot; Full — 60 days &middot; Premium — 90 days</li></ul><p>The clock starts when the deposit clears and we have your kickoff content. Delays in feedback or assets shift the launch date.</p></div><span></span></div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.06</span><span class="accordion-q">How many rounds of revisions are included?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>Two structured revision rounds per milestone — branding, design, and content. We collect all feedback together rather than reacting piece by piece.</p><p>Major scope changes mid-build are quoted as add-ons so the project stays on schedule.</p></div><span></span></div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.07</span><span class="accordion-q">What if I need more pages than my package includes?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>Add three extra pages for Rs 8,000. You can also add a booking system (Rs 10,000) or a small ecommerce module up to 10 products (Rs 25,000).</p><p>Add-ons are listed on the Packages page and confirmed in your scope before work begins.</p></div><span></span></div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.08</span><span class="accordion-q">Do you write the content for me?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>We guide you through a content brief and edit what you provide so it&rsquo;s clear and consistent. Full copywriting from scratch isn&rsquo;t included in launch packages — you know your business best.</p><p>For ecommerce, product description writing is available as an add-on at Rs 5,000 per 25 products.</p></div><span></span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="care">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <span class="eyebrow hairline-draw">03 / Care Plan &amp; Support</span>
+        </div>
+        <div>
+          <h2>How your site stays online after launch.</h2>
+          <p style="margin-top: var(--space-2); color: var(--color-muted); max-width: 580px;">The Care Plan keeps your hosting, domain, email, backups, and security looked after — so launch day isn&rsquo;t the day things start to slip.</p>
+        </div>
+      </div>
+
+      <div class="accordion reveal">
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.09</span><span class="accordion-q">Is the Care Plan really mandatory?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>Yes — for every launch client. At Rs 3,500/month, it covers the things a website needs to stay healthy: hosting, domain, email, daily backups, security, uptime monitoring, and minor updates.</p><p>We don&rsquo;t hand off sites we can&rsquo;t support. It&rsquo;s how we keep the work we deliver in good standing.</p></div><span></span></div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.10</span><span class="accordion-q">What counts as a &ldquo;minor update&rdquo;?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>Small text edits, swapping an image, updating opening hours, adding a team member, fixing a broken link. Anything that takes us under 30 minutes.</p><p>Larger changes — new pages, new sections, redesigns — are quoted separately or rolled into a site refresh.</p></div><span></span></div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.11</span><span class="accordion-q">Can I cancel the Care Plan later?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>You can pause or end the Care Plan at any time with one month&rsquo;s notice. If you stop, we transfer the site files to you and you take over hosting, security, and updates yourself.</p><p>Most clients stay on the plan because the cost of one missed update or one expired domain is higher than a year of cover.</p></div><span></span></div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger"><span class="accordion-num">Q.12</span><span class="accordion-q">What support do I get right after launch?</span><span class="accordion-icon"></span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner"><span></span><div><p>Direct WhatsApp support, included with Full and Premium Launch:</p><ul><li>Full Launch — 60 days of WhatsApp support</li><li>Premium Launch — 90 days of WhatsApp support plus a 30-day post-launch check-in</li></ul><p>Beyond that window, the Care Plan covers ongoing technical questions. Strategy and growth support continue through Social Continuation or Ads Management if you choose to extend.</p></div><span></span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div><span class="eyebrow hairline-draw">Still asking</span></div>
+        <div><h2>If your question isn&rsquo;t here.</h2><p style="margin-top: var(--space-2); color: var(--color-muted); max-width: 580px;">Three short answers to the things people ask once they&rsquo;ve read the rest.</p></div>
+      </div>
+      <div class="still-asking reveal">
+        <div class="still-asking-item">
+          <div class="label">Not sure which package</div>
+          <h4>Start with the Launch Audit.</h4>
+          <p>We&rsquo;ll review your business and recommend a package within 48 hours. No pressure to commit.</p>
+        </div>
+        <div class="still-asking-item">
+          <div class="label">Already have a site</div>
+          <h4>Site refresh is Rs 30,000.</h4>
+          <p>Available for sites launched 12+ months ago. We rework structure, design, and content without a full rebuild.</p>
+        </div>
+        <div class="still-asking-item">
+          <div class="label">Need ads or social after launch</div>
+          <h4>Add a monthly service.</h4>
+          <p>Ads Management from Rs 10K/month and Social Continuation from Rs 12K/month, available to completed launch clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final mesh-bg">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div>
+          <span class="eyebrow hairline-draw">Next step</span>
+          <h2 style="margin-top: var(--space-3);">Ready to <span class="accent">start</span>? Begin with a free Launch Audit.</h2>
+          <p style="margin-top: var(--space-3); color: var(--color-muted); max-width: 520px;">A short, structured conversation. We&rsquo;ll review your business and send a clear recommendation within 48 hours.</p>
+        </div>
+        <div class="btn-group" style="justify-content: flex-end;">
+          <a class="btn btn-primary" href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer">Start Your Launch Audit</a>
+          <a class="btn btn-ghost" href="/packages.html">See Packages</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo" style="margin-bottom: var(--space-2);">Orbitra</div>
+        <p style="max-width: 360px; color: var(--color-muted); font-size: 0.95rem;">Website, branding, and social — delivered as packages, not projects. Built for Mauritian businesses ready to launch.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/packages.html">Packages</a></li>
+          <li><a href="/process.html">Process</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Begin</h5>
+        <ul>
+          <li><a href="https://calendly.com/edarling85/" target="_blank" rel="noopener noreferrer">Start Your Launch Audit</a></li>
+          <li><a href="mailto:hello@orbitra.mu">hello@orbitra.mu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2025</span> Orbitra — Mauritius</span>
+      <span>Built on a structured foundation</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+<script>
+(function () {
+  function init() {
+    var items = document.querySelectorAll('.accordion-item');
+    items.forEach(function (item) {
+      var trigger = item.querySelector('.accordion-trigger');
+      var panel = item.querySelector('.accordion-panel');
+      if (!trigger || !panel) return;
+      trigger.addEventListener('click', function () {
+        var isOpen = item.classList.contains('open');
+        items.forEach(function (i) {
+          i.classList.remove('open');
+          var p = i.querySelector('.accordion-panel');
+          if (p) p.style.maxHeight = null;
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      });
+    });
+  }
+  if (document.readyState !== 'loading') init();
+  else document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
+</body>
+</html>
